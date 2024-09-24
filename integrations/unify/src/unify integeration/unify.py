@@ -54,6 +54,7 @@ class UnifyGenerator:
         """
         deserialize_secrets_inplace(data["init_parameters"], keys=["api_key"])
         return default_from_dict(cls, data)
+    
 
     @component.output_types(replies=List[str], meta=Dict[str, Any])
     def run(self, prompt: str, generation_kwargs: Optional[Dict[str, Any]] = None):
